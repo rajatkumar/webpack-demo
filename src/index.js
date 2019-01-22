@@ -1,11 +1,8 @@
-/*
-- it is not obvious that this file depends on `lodash` (an external lib)
-- if `lodash` is missing the app will not work
-- if additional external libs are added, the browser will load those
-even if those files are never needed/used/executed
-*/
+import _ from 'lodash';
+
 function component() {
     let element = document.createElement('div');
+    // Now, we make it obvious that  we are importing lodash from somewhere
     element.innerHTML = _.join(['Hello', 'World', 'Webpack'], '*-*');
     return element;
 }
